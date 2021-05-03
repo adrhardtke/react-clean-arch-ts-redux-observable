@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { Provider } from 'react-redux';
+
+import store from './store';
+import AppContainer from './components/AppContainer';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <h1>Hello</h1>,
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Provider store={store}>
+    <AppContainer />
+  </Provider>,
+  document.getElementById("app")
 );
